@@ -69,13 +69,34 @@ const button = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.mobile__nav');
 
 button.addEventListener('click', menuBurger);
-function menuBurger() {
-	mobileMenu.classList.toggle('active');
+function menuBurger(event) {
+	if (event.target.closest(".burger")) {
+		console.log('nope');
+		button.classList.toggle("close")
+		mobileMenu.classList.toggle('active');
+		document.body.style.overflow = "hidden";
+	}
+	if (!event.target.closest(".close")) {
+		console.log('yep');
+		mobileMenu.classList.remove('active');
+		document.body.style.overflow = "auto";
+	}
 }
-// menuBurger();
+
+// ?? Hide a mobile__nav
+window.addEventListener('resize', shrink);
+function shrink(event) {
+	if (window.innerWidth >= 1100) {
+		mobileMenu.classList.remove('active');
+		document.body.style.overflow = "auto";
+	}
+};
+
+
 
 // ??   close menu button
 const closeButton = mobileMenu.lastElementChild;
+// console.log(closeButton);
 closeButton.addEventListener('click', function (e) {
 	mobileMenu.classList.remove('active');
 });
