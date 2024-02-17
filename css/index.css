@@ -157,12 +157,12 @@ body {
 }
 
 .info-hours {
-  background: url(/src/assets/clock-1.png) 0 0/14px 14px no-repeat;
+  background: url(/assets/clock-1.png) 0 0/14px 14px no-repeat;
   padding: 0 22px 0 24px;
 }
 
 .info-placement {
-  background: url(/src/assets/map-11.png) 0 0/14px 14px no-repeat;
+  background: url(/assets/map-11.png) 0 0/14px 14px no-repeat;
   padding: 0 0 10px 24px;
 }
 
