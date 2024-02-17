@@ -152,7 +152,7 @@ body {
 }
 
 .info-calendar {
-  background: url(/assets/calendar-1.png) 0 0/14px 14px no-repeat;
+  background: url(../assets/calendar-1.png) 0 0/14px 14px no-repeat;
   padding: 0 0 10px 24px;
 }
 
