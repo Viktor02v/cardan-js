@@ -113,19 +113,19 @@ body{
 	padding: 0 0 10px 24px;
 }
 .info-hours {
-	background: url(/assets/clock-1.png)0 0/14px 14px  no-repeat;
+	background: url(/src/assets/clock-1.png)0 0/14px 14px  no-repeat;
 	padding: 0 22px 0 24px;
 }
 .info-column-2 {
 }
 .info-placement {
-	background: url(/assets/map-11.png) 0 0/14px 14px no-repeat;
+	background: url(/src/assets/map-11.png) 0 0/14px 14px no-repeat;
 	padding: 0 0 10px 24px;
 
 }
 
 	.info-phone {
-	background: url(/assets/phone-11.png)0 0/14px 14px  no-repeat;
+	background: url(/src/assets/phone-11.png)0 0/14px 14px  no-repeat;
 	padding: 0 0 0 24px;
 }
 
@@ -168,7 +168,7 @@ body{
 	.header{
 		position: relative;
 		background: #7d63639e; 
-		z-index: 1000;
+		z-index: 10000;
 		height: 100px;
 	}
 	.header__row{
@@ -292,7 +292,7 @@ transition: 0.4s;
 }
 .intro {
 
-background: url(/assets/bacg-for-hi.png)  fixed no-repeat;
+background: url(/src/assets/bacg-for-hi.png)  fixed no-repeat;
 padding: 145px 0 60px 0;
 		&__title {
 			color: #FFF;
@@ -343,11 +343,12 @@ padding: 145px 0 60px 0;
 
 
 .advantages {
-background: url(/assets/bg\ for\ adventages.png)  center 287.8px/1440px 219px no-repeat;
+background: url(/src/assets/bg\ for\ adventages.png)  center 287.8px/1440px 219px no-repeat;
 padding: 120px 0 171px 0  ;
 	&__prescription {
-
 	}
+
+
 	&__title {
 	}
 
@@ -415,7 +416,7 @@ padding: 120px 0 171px 0  ;
 
 .work {
 	position: relative;
-	background: url(/assets/Rectangle\ for\ how.png) left 98px /805px 699px no-repeat;
+	background: url(/src/assets/Rectangle\ for\ how.png) left 98px /805px 699px no-repeat;
 padding: 0px 0px 208px 0px ;
 	&__title {
 		padding: 0  0 0px 100px;
@@ -465,13 +466,13 @@ padding: 0px 0px 208px 0px ;
 		margin: 0 0 0 48px;
 		width: 600px;
 		height: 459px;
-		background:url(/assets/Видео\ for\ work.png) center/130px 130px no-repeat , url(/src/assets/Rectangle\ 5\ for\ work.png) no-repeat;
+		background:url(/src/assets/Видео\ for\ work.png) center/130px 130px no-repeat , url(/src/assets/Rectangle\ 5\ for\ work.png) no-repeat;
 	}
 }
 
 
 .service {
-	background: url(/assets/Rectangle\ 10\ for\ service.png)right 60px /609px 715px no-repeat;
+	background: url(/src/assets/Rectangle\ 10\ for\ service.png)right 60px /609px 715px no-repeat;
 padding: 0 0 25px 0 ;
 
 	&__content {
@@ -544,7 +545,7 @@ text-align: center;
 }
 
 .they-saying {
-background: url(/assets/tool\ for\ they-saing.png)left -30px /400px 1000px no-repeat;
+background: url(/src/assets/tool\ for\ they-saing.png)left -30px /400px 1000px no-repeat;
 padding: 190px 0 200px 0 ;
 	&__title {
 		text-align: center;
@@ -589,7 +590,7 @@ padding: 190px 0 200px 0 ;
 }
 
 .reviews {
-	background: url(/assets/Rectangle\ 10\ for\ reviews.png) 0 135px /1440px 206px no-repeat;
+	background: url(/src/assets/Rectangle\ 10\ for\ reviews.png) 0 135px /1440px 206px no-repeat;
 padding-bottom: 135px;
 	&__title {
 		margin-top: -30px;
@@ -698,7 +699,7 @@ padding-bottom: 135px;
 		}
 
 		&__contacts-number {
-			background: url(/assets/phone\ for\ footer.png) left/16px 16px no-repeat;
+			background: url(/src/assets/phone\ for\ footer.png) left/16px 16px no-repeat;
 			margin: 30px 0 30px 0px;
 			padding: 0 0 0 24px;
 			color: #000;
@@ -707,7 +708,7 @@ padding-bottom: 135px;
 		}
 
 		&__contacts-place {
-			background: url(/assets/map\ for\ footer.png) left/16px 16px no-repeat;
+			background: url(/src/assets/map\ for\ footer.png) left/16px 16px no-repeat;
 			padding: 0 0 0 24px;
 			color: #000;
 			font-size: 16px;
