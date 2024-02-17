@@ -323,7 +323,7 @@ body {
 }
 
 .intro {
-  background: url(../src/assets/bacg-for-hi.png) fixed no-repeat;
+  background: url(/assets/bacg-for-hi.png) fixed no-repeat;
   padding: 145px 0 60px 0;
 }
 .intro__title {
