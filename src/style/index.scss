@@ -41,27 +41,102 @@ body{
 	&__lang {
 	padding: 2px 0 0 0;
 	margin: 0 0 0 25px;
-	color: #fefbfb;
+	color: hsl(0, 60%, 99%);
 	font-size: 14px;
 	}
-	&__lang::after{
-		content: ">";
-		transition: 1.0s;
-	}
-	&__lang._active::after{
-		content: "<";
-		padding: 5px;
-		background: rgba(253, 184, 184, 0.256);
-		border-radius: 50%;
-		transition: 1.0s;
-	}
-	&__lang.double::after{
-		content: "<<";
-		padding: 6px;
-		background: rgba(250, 188, 188, 0.199);
-		transition: 1.0s;
-	}
+}
+.drop-down{
+	position: relative;
+}
+.drop-button {
+	border-radius: 6px;
+	position: relative;
+	display: block;
+	padding: 5px;
+	text-align: left;
+	cursor: pointer;
+	border: 1px solid #000;
+	background: #FFF;
+	font-weight: 500;
+	font: 16px sans-serif;
+	width: 55px;
+}
+
+
+.drop-button::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+
+	width: 0;
+	height: 0;
+	border-width: 10.4px 6px 0 6px;
+	border-color: #79849B transparent transparent transparent;
+	border-style: solid;
+
+	transition: 0.4s ease;
+	pointer-events: none;
+}
+
+.drop-button:focus{
+	outline: none;
+	box-shadow: 0px 0px 4px 4px rgba(2, 215, 243, 0.672);
+}
+.dropdown-list {
+	display: none;
+	position: absolute;
+	left: 25px;
+	// top: px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color: black;
+	background: white;
+	box-shadow: 0px 2px 4px #79849B ;
+	overflow: hidden;
+	border-radius: 6px;
+	font: 16px sans-serif;
+	width: 66%;
+	z-index: 1;
+}
+.dropdown-list--visible{
+	display: block;
+}
+.dropdown-button--visible::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transition: 0.4s ease;
+	transform: translateY(-50%);
+
+	width: 0;
+	height: 0;
+	border-width: 10.4px 6px 0 6px;
+	border-color: #79849B transparent transparent transparent;
+	border-style: solid;
+
+	pointer-events: none;
 	
+}
+.dropdown-item {
+	margin: 0;
+	padding: 5px 0 5px 5px;
+	border: 1px solid #000;
+	border-top: 0;
+	cursor: pointer;
+}
+.dropdown-item:first-child{
+	border-radius: 6px 6px 0 0 ;
+}
+.dropdown-item:last-child{
+	border-radius: 0px 0px 6px 6px ;
+}
+.dropdown-item:hover{
+	background: #a5aab567;
+
 }
 .header.is-scroll {
 	background: #7d63639e;

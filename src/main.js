@@ -1,67 +1,37 @@
-const menuBody = document.querySelector(".menu");
 const lang = document.querySelector('.header__lang');
-const linkOne = document.querySelector('.menu__linkk');
-const linkTwo = document.querySelector('.menu__link');
-const menuList = document.querySelector('.menu__list');
-
-const innerHTMLOfLang = lang.innerHTML;
-const innerHTMLOfLinkOne = linkOne.innerHTML;
-const innerHTMLOfLinkTwo = linkTwo.innerHTML;
-
+const langButton = document.querySelector('.drop-button');
+const langList = document.querySelector('.dropdown-list');
+const langItems = document.querySelectorAll('.dropdown-item');
 // ??  for languages
-document.addEventListener("click", menu);
-function menu(event) {
-	if (event.target.closest('.header__lang')) {
-		menuBody.classList.toggle('_active');
-	}
-	if (!event.target.closest('.menu')) {
-		menuBody.classList.remove('_active');
-	}
-	if (event.target.closest('.menu__linkk')) {
-		lang.innerHTML = innerHTMLOfLinkOne;
-	}
-	if (!event.target.closest('.menu')) {
-		lang.innerHTML = innerHTMLOfLang;
-	}
-	if (event.target.closest('.menu__link')) {
-		lang.innerHTML = innerHTMLOfLinkTwo;
-	}
-	if (!event.target.closest('.menu')) {
-		lang.innerHTML = innerHTMLOfLang;
-	}
-	if (event.target.closest('.header__lang')) {
-		lang.classList.toggle('_active');
-	}
-	if (!event.target.closest('.menu')) {
-		lang.classList.remove('_active');
-	}
-	if (event.target.closest('.menu__linkk')) {
-		lang.classList.toggle('double');
-	}
-	if (!event.target.closest('.menu')) {
-		lang.classList.remove('double');
-	}
+// !! click for drop down to appear
+langButton.addEventListener('click', drop);
+function drop(event) {
+	langList.classList.toggle('dropdown-list--visible');
+	langButton.classList.toggle('dropdown-button--visible');
 }
-document.addEventListener("keyup", scroll);
-document.addEventListener("keydown", scroll);
-
-function scroll(event) {
-	if (event.key === ",") {
-		menuList.scrollBy({
-			top: 15,
-			left: 0,
-			behavior: "smooth",
-		});
-	};
-	if (event.key === ".") {
-		menuList.scrollBy({
-			top: -15,
-			left: 0,
-			behavior: "smooth",
-		});
-	};
-};
-
+// !! click to change the text of button
+langItems.forEach(function (langItem) {
+	langItem.addEventListener('click', function (event) {
+		langList.classList.remove('dropdown-list--visible');
+		langButton.innerText = this.innerText;
+		event.stopPropagation();
+		langButton.focus();
+	});
+});
+// !! click beyond a dropdown for it to disappear
+document.addEventListener('click', function (e) {
+	if (e.target !== langButton) {
+		langList.classList.remove('dropdown-list--visible');
+		langButton.classList.remove('dropdown-button--visible');
+	}
+});
+// !! click on the keys "escape" and "tab" for it to disappear
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Tab' || e.key === 'Return') {
+		langList.classList.remove('dropdown-list--visible');
+		langButton.classList.remove('dropdown-button--visible');
+	}
+});
 //  ??  for burger menu
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
