@@ -41,13 +41,13 @@ const mobileMenu = document.querySelector('.mobile__nav');
 button.addEventListener('click', menuBurger);
 function menuBurger(event) {
 	if (event.target.closest(".burger")) {
-		console.log('nope');
+		// console.log('nope');
 		button.classList.toggle("close")
 		mobileMenu.classList.toggle('active');
 		document.body.style.overflow = "hidden";
 	}
 	if (!event.target.closest(".close")) {
-		console.log('yep');
+		// console.log('yep');
 		mobileMenu.classList.remove('active');
 		document.body.style.overflow = "auto";
 	}

@@ -85,9 +85,10 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  padding: 30px 0;
+  padding: 30px 0 0px 0;
+  z-index: 10000;
 }
 .header__row {
   display: flex;
@@ -208,7 +209,7 @@ body {
 }
 
 .header.is-scroll {
-  background: rgba(125, 99, 99, 0.6196078431);
+  background: #7d6363;
   position: fixed;
   width: 100%;
   padding: 30px 0 0 0;
@@ -216,6 +217,9 @@ body {
   transition: 2s;
 }
 
+.reference {
+  cursor: pointer;
+}
 .reference__body {
   width: 582px;
 }
@@ -323,7 +327,7 @@ body {
   display: block;
   z-index: 98;
   background-color: #7d6363;
-  padding-top: 24px;
+  padding-top: 124px;
   transition: transform 0.4s ease;
   transform: translateY(calc(-100% - 100px));
 }
@@ -691,6 +695,7 @@ body {
   padding: 20px 0 0 0;
 }
 .footer__logo-logotype {
+  cursor: pointer;
   margin: 0 0 9px 0;
 }
 .footer__logo-brand {
@@ -716,6 +721,7 @@ body {
 }
 
 .links__items {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
