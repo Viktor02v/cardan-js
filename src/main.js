@@ -93,17 +93,55 @@ function flip(event) {
 	}
 };
 
-// ?? Scroll into main
+// ?? Scroll-Into 
+// ! Pages>
+const homeBlock = document.querySelector('.intro')
 const advantagesBlock = document.querySelector(".advantages");
-const mainReferance = document.querySelector('.reference-main');
-mainReferance.addEventListener("click", scrollToAdventsages);
-function scrollToAdventsages() {
-	advantagesBlock.scrollIntoView({
-		block: 'start',
-		inline: "nearest",
-		behavior: "smooth",
-	});
-};
+const workBlock = document.querySelector('.work');
+// ! Items>
+const firstReferance = document.querySelector('.reference-item');
+const secondReferance = document.querySelector('.reference-item-1');
+// ! Main-block
+firstReferance.addEventListener('click', function (event) {
+	if (event.target.closest('.reference-item')) {
+		advantagesBlock.scrollIntoView({
+			block: 'start',
+			inline: "nearest",
+			behavior: "smooth",
+		})
+	}
+	if (event.target !== homeBlock) {
+		homeBlock.scrollIntoView({
+			block: 'start',
+			inline: "nearest",
+			behavior: "smooth",
+		})
+	}
+});
+// ! Second-block
+secondReferance.addEventListener('click', function (event) {
+	if (event.target.closest('.reference-item-1')) {
+		workBlock.scrollIntoView({
+			block: 'start',
+			inline: "nearest",
+			behavior: "smooth",
+		})
+	}
+	if (event.target.closest('.reference-item')) {
+		advantagesBlock.scrollIntoView({
+			block: 'start',
+			inline: "nearest",
+			behavior: "smooth",
+		})
+	} else {
+		homeBlock.scrollIntoView({
+			block: 'start',
+			inline: "nearest",
+			behavior: "smooth",
+		})
+	}
+});
+
 
 // ?? Scroll into beginning/home
 const bottomLogoBack = document.querySelector('.footer__logo-logotype');
